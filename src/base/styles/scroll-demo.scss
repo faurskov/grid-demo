@@ -1,0 +1,33 @@
+@media screen and (prefers-reduced-motion: no-preference) { 
+  .banner-content {
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -50px;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    scale: 1.5;
+  }
+}
+
+.scroll-demo {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  height: 5px;
+  background-image: var(--gradient);
+  animation: scroll linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+.gallery {
+  display: grid;
+  gap: var(--padding);
+  grid-template-areas: 
+  "a" 
+  "b" 
+  "c";
+
+  
+
+  & > * {
+    display: grid;
+    place-items: center;
+    padding: var(--padding);
+    color: white;
+    text-transform: uppercase;
+  }
+  .a {
+    grid-area: a;
+    background-color: var(--primary-color-400);
+  }
+
+  .b {
+    grid-area: b;
+    background-color: var(--primary-color-600);
+  }
+
+  .c {
+    grid-area: c;
+    background-color: var(--primary-color-800);
+  }
+}
+
+
+@media (width > 768px) {
+  .gallery {
+    grid-template-areas: 
+    "a b" 
+    "c c";
+  }
+}
+
+@media (width > 1024px) {
+  .gallery {
+    grid-template-areas: 
+    "a c c" 
+    "b c c";
+  }
+}

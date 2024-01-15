@@ -1,0 +1,26 @@
+.banner {
+    display: grid;
+    grid-template-areas: "stack";
+    place-items: center;
+    
+    & > * {
+      grid-area: stack;
+    }
+    
+    & > picture {
+      filter: brightness(0.5);
+      z-index: -1;
+    }
+  }
+  
+  .banner-content {
+    border: 1px solid var(--secondary-color);
+    padding: var(--padding);
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 3px rgba(black, 0.7);
+  
+    & > * {
+      margin: 0;
+    }
+  }

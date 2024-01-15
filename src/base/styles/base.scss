@@ -1,0 +1,66 @@
+@import "./reset";
+
+:root {
+  --padding: clamp(1rem, 3.125vw, 2rem);
+
+  --primary-color-50: #e9ebf3;
+  --primary-color-100: #c7cee3;
+  --primary-color-200: #a4aecf;
+  --primary-color-300: #818fbb;
+  --primary-color-400: #6675ad;
+  --primary-color-500: #4c5ea0;
+  --primary-color-600: #455596;
+  --primary-color-700: #3c4b8a;
+  --primary-color-800: #35427e;
+  --primary-color-900: #2a3166;
+  --primary-color: var(--primary-color-900);
+  --secondary-color-50: #ffecef;
+  --secondary-color-100: #ffd0d5;
+  --secondary-color-200: #f59e9f;
+  --secondary-color-300: #ee787a;
+  --secondary-color: var(--secondary-color-300);
+  --secondary-color-400: #fa5858;
+  --secondary-color-500: #ff483e;
+  --secondary-color-600: #f13f3d;
+  --secondary-color-700: #df3537;
+  --secondary-color-800: #d22e30;
+  --secondary-color-900: #c32224;
+
+  --gradient: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+.p-default {
+  padding: var(--padding);
+}
+
+.p-vertical {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+.mb-default {
+  margin-bottom: var(--padding);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}

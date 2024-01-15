@@ -1,0 +1,37 @@
+.content-grid {
+  --content-width: min(calc(100% - var(--padding) * 2), 80ch);
+
+  display: grid;
+
+  // [full-width-start] [break-out-start] [content-start] [content-end] [break-out-end] [full-width-end]
+
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding), 1fr) 
+    [break-out-start] minmax(0, 5ch)
+    [content-start] var(--content-width) [content-end] 
+    minmax(0, 5ch) [break-out-end]
+     minmax(
+      var(--padding),
+      1fr
+    )
+    [full-width-end];
+
+  & > * {
+    grid-column: content;
+  }
+
+  & > .break-out {
+    grid-column: break-out;
+  }
+
+  & > .full-width {
+    grid-column: full-width;
+  }
+
+  & > nav {
+    grid-column: content-start / full-width-end;
+  }
+}
+
+
+
